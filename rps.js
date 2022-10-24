@@ -1,8 +1,11 @@
 const button = document.getElementById("javascript_id");
-
-//rock == 0
-//paper == 0 
-//scissorss == 0 
+const output_player = document.getElementById("update-player");
+const output_computer = document.getElementById("update-computer");
+const computer_move = document.getElementById("computers-move")
+const status = document.getElementById("status")
+//const status = document.getElementById("status");
+let player_score = 0;
+let computer_score = 0;
 
 
 function getComputerChoice() {
@@ -44,8 +47,23 @@ function game (playermove, computermove){
 function playGame () {
     let playermove = getPlayerSelection();
     let computermove = getComputerChoice();
-    console.log(playermove, computermove);
     let result = game(playermove, computermove);
+
+
+    if (result == "player"){
+        player_score++;
+        output_player.innerHTML = player_score;
+        status.innerHTML = "You won!"
+    }
+    else if (result == "computer"){
+        computer_score++;
+        output_computer.innerHTML = computer_score;
+        status.innerHTML = "You Lost!"
+
+    }
+    else {status.innerHTML = "Tie!"}
+
+    computer_move.innerHTML = computermove.toUpperCase()
 
 }
 button.addEventListener('click', playGame);
