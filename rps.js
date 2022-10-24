@@ -2,7 +2,7 @@ const button = document.getElementById("javascript_id");
 
 //rock == 0
 //paper == 0 
-//scissors == 0 
+//scissorss == 0 
 
 
 function getComputerChoice() {
@@ -24,14 +24,28 @@ function getPlayerSelection(){
     return string;
 }
 
+function game (playermove, computermove){
+    if (playermove == computermove) {return "tie"}
+    if (playermove == "rock" && computermove == "scissors"){return "player";}
+    if (playermove == "rock" && computermove == "paper"){return "computer";}
+    if (playermove == "scissors" && computermove == "paper"){return "player";}
+    if (playermove == "scissors" && computermove == "rock"){return "computer";}
+    if (playermove == "paper" && computermove == "rock"){return "player";}
+    if (playermove == "paper" && computermove == "scissors"){return "computer";}
+}
 
 
+//If rock and rock == tie 
+//if rock and scissors == rock
+//if rock and paper == paper
+//if scissors and paper == scissors
 
 
 function playGame () {
     let playermove = getPlayerSelection();
     let computermove = getComputerChoice();
-    console.log(computermove)
+    console.log(playermove, computermove);
+    let result = game(playermove, computermove);
 
 }
 button.addEventListener('click', playGame);
