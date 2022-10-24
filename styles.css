@@ -1,0 +1,81 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: darkblue;
+    color: white;
+    margin: 0;
+    font-family: "Courier";
+}
+
+p {
+    margin: 0;
+}
+
+.title {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-weight: 700;
+
+    font-size: larger;
+}
+
+.game {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.theform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.scoreboard #score-title {
+    font-size: xx-large;
+    color: red;
+}
+
+.results {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    max-width: 300px;
+    min-width: 210px;
+}
+
+.player-scores {
+    display: flex;
+    justify-content: space-between;
+}
+
+.computer-score {
+    display: flex;
+    justify-content: space-between;
+}
+
+.theform div {
+    padding-top: 12px;
+}
+
+
+.footer {
+    height: 80px;
+    background-color: #1f2937;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
