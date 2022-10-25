@@ -48,6 +48,12 @@ p {
     font-weight: 700;
 }
 
+#choose-move {
+    color: black;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
 .results {
     text-align: left;
     display: flex;
