@@ -52,18 +52,18 @@ function playGame () {
 
     if (result == "player"){
         player_score++;
-        output_player.innerHTML = player_score;
-        status.innerHTML = "You won!"
+        output_player.textContent = player_score;
+        status.textContent = "You won!"
     }
     else if (result == "computer"){
         computer_score++;
-        output_computer.innerHTML = computer_score;
-        status.innerHTML = "You Lost!"
+        output_computer.textContent = computer_score;
+        status.textContent = "You Lost!"
 
     }
-    else {status.innerHTML = "Tie!"}
+    else {status.textContent = "Tie!"}
 
-    computer_move.innerHTML = computermove.toUpperCase()
+    computer_move.textContent = computermove.toUpperCase()
 
 }
 button.addEventListener('click', playGame);
