@@ -30,9 +30,31 @@ p {
 
 .theform {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+#choose-move {
+    color: black;
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.box {
+    width: 30%;
+    transition: .5s;
+}
+
+
+.box img {
+    display: block;
+    width: 100%;
+}
+
+.box:hover {
+    transform:scale(1.15);
+    z-index: 2;
 }
 
 .scoreboard {
@@ -76,7 +98,6 @@ p {
     padding-top: 12px;
 }
 
-
 .bigger {
     display: flex;
     margin-top: 18px;
@@ -102,7 +123,7 @@ p {
 
 
 .footer {
-    min-height: 80px;
+    height: 80px;
     background-color: #1f2937;
     display: flex;
     align-items: center;

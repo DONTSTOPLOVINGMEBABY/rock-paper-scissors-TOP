@@ -1,12 +1,13 @@
-const button = document.getElementById("javascript_id");
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
 const output_player = document.getElementById("update-player");
 const output_computer = document.getElementById("update-computer");
 const computer_move = document.getElementById("computers-move")
 const status = document.getElementById("status")
-//const status = document.getElementById("status");
+//set player scores
 let player_score = 0;
 let computer_score = 0;
-
 
 function getComputerChoice() {
     let move = Math.floor((Math.random() * 3)) ; 
@@ -14,17 +15,6 @@ function getComputerChoice() {
     if (move == 0) {return "rock";}
     else if (move == 1) {return "paper";}
     else {return "scissors";}
-}
-
-function getPlayerSelection(){
-    let userInput = document.getElementsByName("move")
-    let string ;
-    for (let i = 0, length = userInput.length; i < length; i++){
-        if (userInput[i].checked) {
-            string = userInput[i].id
-        }
-    }
-    return string;
 }
 
 function game (playermove, computermove){
@@ -43,10 +33,10 @@ function game (playermove, computermove){
 //if rock and paper == paper
 //if scissors and paper == scissors
 
-
-function playGame () {
-    let playermove = getPlayerSelection();
+function playGame (playermove) {
+    // let playermove = getPlayerSelection();
     let computermove = getComputerChoice();
+    console.log(playermove, computermove);
     let result = game(playermove, computermove);
 
 
@@ -66,4 +56,10 @@ function playGame () {
     computer_move.textContent = computermove.toUpperCase()
 
 }
-button.addEventListener('click', playGame);
+
+
+
+rock.addEventListener("click", () => {playGame("rock")});
+paper.addEventListener('click', () => {playGame("paper")});
+scissors.addEventListener('click', () => {playGame("scissors")});
+
