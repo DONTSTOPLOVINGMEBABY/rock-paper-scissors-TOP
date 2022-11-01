@@ -130,3 +130,25 @@ p {
     justify-content: center;
 }
 
+
+/* This is for the end of the game */ 
+
+.end-game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+#reload-page {
+    height: 80px;
+    width: 120px;
+    border-radius: 25px;
+    font-size: larger;
+    font-weight: bolder;
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+

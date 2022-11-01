@@ -8,7 +8,6 @@ const status = document.getElementById("status")
 //set player scores
 let player_score = 0;
 let computer_score = 0;
-let game_count = 0 ;
 
 function getComputerChoice() {
     let move = Math.floor((Math.random() * 3)) ; 
@@ -29,17 +28,12 @@ function game (playermove, computermove){
 }
 
 
-function bestof5 (game_count) {
-    if (game_count != 5) {
-        return 
-    }
+function bestof5 () {
     if (player_score == 3) {
-        //have a menu come down and say the player won. 
-        //Ask them if they want to play again?
+        window.location.href = "./win.html"
     }
     if (computer_score == 3) {
-        //have a menu come down and say they lost. 
-        //Ask them if they want to play again?
+        window.location.href = "./lose.html"
     }
 }
 
@@ -70,7 +64,7 @@ function playGame (playermove) {
     else {status.textContent = "Tie!"}
 
     computer_move.textContent = computermove.toUpperCase()
-    game_count++;
+    if (player_score == 3 || computer_score == 3) {bestof5()}
     
 }
 
