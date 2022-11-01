@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin RPP</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div class="title">
+        <h1>Rock Paper Scissors</h1>
+        <h3>You vs. The Computer!</h3>
+    </div>
+
+    <div class="game">
+        <form class="theform">
+            <p id="choose-move">Choose your move</p>
+            <div>
+                <label for="rock">Rock</label>
+                <input type="radio" name="move" id="rock">
+            </div>
+            <div>
+                <label for="paper">Paper</label>
+                <input type="radio" name="move" id="paper">
+            </div>
+            <div>
+                <label for="scissors">Scissors</label>
+                <input type="radio" name="move" id="scissors">
+            </div>
+            <div>
+                <input type="button" id="javascript_id" value="Play">
+            </div>
+        </form>
+  
+        <div class="bigger">
+
+        <div class="display-computer-move">
+            <p>Computer's Move: <p id="computers-move"></p> 
+            </p>
+        <div class="status">
+            <p id="status"></p>
+        </div>
+        </div>
+        </div>
+
+
+
+        <div class="scoreboard">
+            <p id="score-title">Score Board</p>
+            <div class="results">
+                <div class="player-scores">
+                    <h1>Player</h1>
+                    <h1 id="update-player">0</h1>
+                </div>
+                <div class="computer-score">
+                    <h1>Computer</h1>
+                    <h1 id="update-computer">0</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Henry Jacobs</p>
+    </div>
+    <script src="./rps.js"></script>
+</body>
+</html>
