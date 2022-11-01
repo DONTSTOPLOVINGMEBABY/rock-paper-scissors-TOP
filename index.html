@@ -5,57 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin RPP</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
     <div class="title">
         <h1>Rock Paper Scissors</h1>
         <h3>You vs. The Computer!</h3>
     </div>
-
     <div class="game">
         <p id="choose-move">Choose your move</p>
         <form class="theform">
-
-            <input type="image" src="./images/rock.png" name="move" id="rock" width="400px">
-            <input type="image" src="./images/paper.png" name="move" id="rock" width="auto" height="200px">
-            <input type="image" src="./images/scissor.png" name="move" id="scissor" width="auto" height="200px">
-
-        </form>
-  
-        <div class="bigger">
-
-        <div class="display-computer-move">
-            <p>Computer's Move: <p id="computers-move"></p> 
-            </p>
-        <div class="status">
-            <p id="status"></p>
-        </div>
-        </div>
-        </div>
-
-
-
-        <div class="scoreboard">
-            <p id="score-title">Score Board</p>
-            <div class="results">
-                <div class="player-scores">
-                    <h1>Player</h1>
-                    <h1 id="update-player">0</h1>
-                </div>
-                <div class="computer-score">
-                    <h1>Computer</h1>
-                    <h1 id="update-computer">0</h1>
-                </div>
+            <div class="box">
+                <img src="./images/rock.png" alt="rock" id="rock">
             </div>
-        </div>
-
+            <div class="box">
+                <img src="./images/paper.png" alt="paper" id="paper">
+            </div>
+            <div class="box">
+                <img src="./images/scissor.png" alt="scissor" id="scissors"> 
+            </div>
+        </form>
+    
     </div>
 
-    <div class="footer">
-        <p>Henry Jacobs</p>
-    </div>
-    <script src="./rps.js"></script>
+    <script src="./rps2.js"></script>
 </body>
 </html>
