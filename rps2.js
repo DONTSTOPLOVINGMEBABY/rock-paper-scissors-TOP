@@ -59,8 +59,7 @@ function playGame (playermove) {
 
 
 
-
-rock.addEventListener('speech', playGame('rock'));
-paper.addEventListener('speech', playGame('paper'));
-scissors.addEventListener('speech', playGame('scissors'));
+rock.addEventListener("click", () => {playGame("rock")});
+paper.addEventListener('click', () => {playGame("paper")});
+scissors.addEventListener('click', () => {playGame("scissors")});
 
