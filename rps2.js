@@ -28,12 +28,39 @@ function game (playermove, computermove){
 }
 
 
+//If rock and rock == tie 
+//if rock and scissors == rock
+//if rock and paper == paper
+//if scissors and paper == scissors
+
+function playGame (playermove) {
+    // let playermove = getPlayerSelection();
+    let computermove = getComputerChoice();
+    console.log(playermove, computermove);
+    let result = game(playermove, computermove);
+
+
+    if (result == "player"){
+        player_score++;
+        output_player.textContent = player_score;
+        status.textContent = "You won!"
+    }
+    else if (result == "computer"){
+        computer_score++;
+        output_computer.textContent = computer_score;
+        status.textContent = "You Lost!"
+
+    }
+    else {status.textContent = "Tie!"}
+
+    computer_move.textContent = computermove.toUpperCase()
+
+}
 
 
 
 
-
-rock.addEventListener('click', rock_function);
-paper.addEventListener('click', paper_function);
-scissors.addEventListener('click', scissors_function);
+rock.addEventListener('speech', playGame('rock'));
+paper.addEventListener('speech', playGame('paper'));
+scissors.addEventListener('speech', playGame('scissors'));
 
