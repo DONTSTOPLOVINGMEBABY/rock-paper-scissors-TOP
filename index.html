@@ -8,45 +8,32 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-
     <div class="title">
         <h1>Rock Paper Scissors</h1>
         <h3>You vs. The Computer!</h3>
     </div>
-
     <div class="game">
+        <p id="choose-move">Choose your move</p>
         <form class="theform">
-            <p id="choose-move">Choose your move</p>
-            <div>
-                <label for="rock">Rock</label>
-                <input type="radio" name="move" id="rock">
+            <div class="box">
+                <img src="./images/rock.png" alt="rock" id="rock">
             </div>
-            <div>
-                <label for="paper">Paper</label>
-                <input type="radio" name="move" id="paper">
+            <div class="box">
+                <img src="./images/paper.png" alt="paper" id="paper">
             </div>
-            <div>
-                <label for="scissors">Scissors</label>
-                <input type="radio" name="move" id="scissors">
-            </div>
-            <div>
-                <input type="button" id="javascript_id" value="Play">
+            <div class="box">
+                <img src="./images/scissor.png" alt="scissor" id="scissors"> 
             </div>
         </form>
-  
         <div class="bigger">
-
-        <div class="display-computer-move">
-            <p>Computer's Move: <p id="computers-move"></p> 
-            </p>
-        <div class="status">
-            <p id="status"></p>
+            <div class="display-computer-move">
+                <p>Computer's Move: <p id="computers-move"></p> 
+                </p>
+            <div class="status">
+                <p id="status"></p>
+            </div>
+            </div>
         </div>
-        </div>
-        </div>
-
-
-
         <div class="scoreboard">
             <p id="score-title">Score Board</p>
             <div class="results">
@@ -60,12 +47,12 @@
                 </div>
             </div>
         </div>
-
     </div>
-
     <div class="footer">
         <p>Henry Jacobs</p>
     </div>
+    
+
     <script src="./rps.js"></script>
 </body>
 </html>

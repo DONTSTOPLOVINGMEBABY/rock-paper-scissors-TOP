@@ -1,12 +1,14 @@
-const button = document.getElementById("javascript_id");
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
 const output_player = document.getElementById("update-player");
 const output_computer = document.getElementById("update-computer");
 const computer_move = document.getElementById("computers-move")
 const status = document.getElementById("status")
-//const status = document.getElementById("status");
+//set player scores
 let player_score = 0;
 let computer_score = 0;
-
+let game_count = 0 ;
 
 function getComputerChoice() {
     let move = Math.floor((Math.random() * 3)) ; 
@@ -14,17 +16,6 @@ function getComputerChoice() {
     if (move == 0) {return "rock";}
     else if (move == 1) {return "paper";}
     else {return "scissors";}
-}
-
-function getPlayerSelection(){
-    let userInput = document.getElementsByName("move")
-    let string ;
-    for (let i = 0, length = userInput.length; i < length; i++){
-        if (userInput[i].checked) {
-            string = userInput[i].id
-        }
-    }
-    return string;
 }
 
 function game (playermove, computermove){
@@ -38,32 +29,54 @@ function game (playermove, computermove){
 }
 
 
+function bestof5 (game_count) {
+    if (game_count != 5) {
+        return 
+    }
+    if (player_score == 3) {
+        //have a menu come down and say the player won. 
+        //Ask them if they want to play again?
+    }
+    if (computer_score == 3) {
+        //have a menu come down and say they lost. 
+        //Ask them if they want to play again?
+    }
+}
+
+
 //If rock and rock == tie 
 //if rock and scissors == rock
 //if rock and paper == paper
 //if scissors and paper == scissors
 
-
-function playGame () {
-    let playermove = getPlayerSelection();
+function playGame (playermove) {
+    // let playermove = getPlayerSelection();
     let computermove = getComputerChoice();
+    console.log(playermove, computermove);
     let result = game(playermove, computermove);
 
 
     if (result == "player"){
         player_score++;
-        output_player.innerHTML = player_score;
-        status.innerHTML = "You won!"
+        output_player.textContent = player_score;
+        status.textContent = "You won!"
     }
     else if (result == "computer"){
         computer_score++;
-        output_computer.innerHTML = computer_score;
-        status.innerHTML = "You Lost!"
+        output_computer.textContent = computer_score;
+        status.textContent = "You Lost!"
 
     }
-    else {status.innerHTML = "Tie!"}
+    else {status.textContent = "Tie!"}
 
-    computer_move.innerHTML = computermove.toUpperCase()
-
+    computer_move.textContent = computermove.toUpperCase()
+    game_count++;
+    
 }
-button.addEventListener('click', playGame);
+
+
+
+rock.addEventListener("click", () => {playGame("rock")});
+paper.addEventListener('click', () => {playGame("paper")});
+scissors.addEventListener('click', () => {playGame("scissors")});
+
